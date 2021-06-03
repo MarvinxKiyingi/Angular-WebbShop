@@ -10,7 +10,5 @@ export class PrintAdminComponent implements OnInit {
   @Input() adminItem: Order;
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.adminItem);
-  }
+  ngOnInit(): void {}
 }
