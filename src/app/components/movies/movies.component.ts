@@ -22,4 +22,9 @@ export class MoviesComponent implements OnInit {
     });
     this.movieService.getMovies();
   }
+  handleSelectedMovie(aMovie: Movie): void {
+    this.selectedMovie = aMovie;
+    console.log('sending this: ', this.selectedMovie);
+    this.cartService.addToCart(this.selectedMovie);
+  }
 }

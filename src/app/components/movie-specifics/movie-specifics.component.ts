@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Movie } from 'src/app/model/Movie';
+import { CartService } from 'src/app/service/cart/cart.service';
 import { MovieService } from 'src/app/service/movie/movie.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class MovieSpecificsComponent implements OnInit {
   constructor(
     private movieService: MovieService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {
@@ -22,6 +24,9 @@ export class MovieSpecificsComponent implements OnInit {
       this.id = parseInt(params.get('id'));
       this.movieItem = this.movieService.getMoviesId(this.id);
     });
+  }
+  handleAddToCart(): void {
+    this.cartService.addToCart(this.movieItem);
   }
   handleBackToHome(): void {
     this.router.navigate(['/']);
