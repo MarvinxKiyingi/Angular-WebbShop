@@ -14,6 +14,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CartComponent } from './components/shopping-cart/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { PrintAdminComponent } from './components/admin/print-admin/print-admin.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     FooterComponent,
     CartComponent,
     CheckoutComponent,
+    AdminComponent,
+    PrintAdminComponent,
   ],
   imports: [
     BrowserModule,

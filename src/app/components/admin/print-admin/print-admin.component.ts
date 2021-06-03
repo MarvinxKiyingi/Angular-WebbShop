@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Order } from 'src/app/model/order';
 
 @Component({
   selector: 'app-print-admin',
   templateUrl: './print-admin.component.html',
-  styleUrls: ['./print-admin.component.scss']
+  styleUrls: ['./print-admin.component.scss'],
 })
 export class PrintAdminComponent implements OnInit {
-
-  constructor() { }
+  @Input() adminItem: Order;
+  constructor() {}
 
   ngOnInit(): void {
+    console.log(this.adminItem);
   }
-
 }
