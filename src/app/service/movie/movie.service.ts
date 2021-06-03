@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of, Subject } from 'rxjs';
-import { Movie } from '../model/Movie';
+import { Movie } from 'src/app/model/Movie';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +10,7 @@ export class MovieService {
   private movies = new Subject<Movie[]>();
   movies$ = this.movies.asObservable();
 
-  // Här inporterar jag min http module in till min service där jag kommer att använda mig av den. Och porterings listan ovan uppdateras.
+  // Här inporterar jag min http module in till min service där jag kommer att använda mig av den.
   constructor(private http: HttpClient) {}
 
   getMovies(): void {
@@ -26,7 +26,11 @@ export class MovieService {
         });
     } else {
       // Hämta data från localstorage
-      this.movies.next(JSON.parse(localStorage.getItem('Movies') || '[]'));
+      this.movies.next(JSON.parse(localStorage.getItem('Movies')));
     }
+  }
+  getMoviesId(movieID: number): Movie {
+    let movies: Movie[] = JSON.parse(localStorage.getItem('Movies'));
+    return movies.filter((mId) => mId.id == movieID)[0];
   }
 }

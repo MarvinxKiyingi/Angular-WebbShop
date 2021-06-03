@@ -1,1 +1,7 @@
-<app-movie *ngFor="let m of movies" [movie]="m"></app-movie>
+<div class="movies-container">
+  <app-movie
+    class="movie-wrapper"
+    *ngFor="let movie of movies"
+    [movieItem]="movie"
+  ></app-movie>
+</div>

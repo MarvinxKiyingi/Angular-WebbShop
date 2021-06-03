@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Movie } from 'src/app/model/Movie';
+import { CartService } from 'src/app/service/cart/cart.service';
 
 @Component({
   selector: 'app-movie',
@@ -7,11 +9,19 @@ import { Movie } from 'src/app/model/Movie';
   styleUrls: ['./movie.component.scss'],
 })
 export class MovieComponent implements OnInit {
-  @Input() movie: Movie;
+  @Input() movieItem: Movie;
+  // @Output() selectedMovie = new EventEmitter<Movie>();
 
-  constructor() {}
+  constructor(private cartService: CartService, private router: Router) {}
+  // constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.movie);
+  ngOnInit(): void {}
+
+  // handleClick(): void {
+  //   this.selectedMovie.emit(this.movieItem);
+  // }
+  showSpecifics(): void {
+    console.log('show more');
+    this.router.navigate(['movie', this.movieItem.id]);
   }
 }

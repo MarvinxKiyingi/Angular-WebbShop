@@ -1,9 +1,15 @@
-<div class="movie-wrapper">
-  <img [src]="movie.imageUrl" alt="Movie Poster" />
-  <h3>
-    {{ movie.name }}
-  </h3>
+<div class="movie-container">
   <p>
-    {{ movie.year }}
+    {{ movieItem.name }}
   </p>
+  <img
+    (click)="showSpecifics()"
+    class="poster"
+    [src]="movieItem.imageUrl"
+    alt="Movie img"
+  />
+  <p>
+    {{ movieItem.year }}
+  </p>
+  <button>Add to cart</button>
 </div>

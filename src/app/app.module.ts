@@ -12,7 +12,10 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CartComponent } from './components/shopping-cart/cart/cart.component';
-import { MovieSpecificsComponent } from './components/movies/movie-specifics/movie-specifics.component';
+import { MovieSpecificsComponent } from './components/movie-specifics/movie-specifics.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { PrintAdminComponent } from './components/admin/print-admin/print-admin.component';
+import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { MovieSpecificsComponent } from './components/movies/movie-specifics/mov
     FooterComponent,
     CartComponent,
     MovieSpecificsComponent,
+    AdminComponent,
+    PrintAdminComponent,
+    OrderConfirmationComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
