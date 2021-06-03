@@ -5,6 +5,8 @@ import { MovieSpecificsComponent } from './components/movie-specifics/movie-spec
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 const routes: Routes = [
   { path: '', component: MoviesComponent },
@@ -12,6 +14,8 @@ const routes: Routes = [
   { path: 'shoppingcart', component: ShoppingCartComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'confirmation', component: OrderConfirmationComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({

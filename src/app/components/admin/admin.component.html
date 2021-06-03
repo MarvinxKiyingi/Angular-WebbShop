@@ -1,1 +1,7 @@
-<p>admin works!</p>
+<div class="printAdmin-container">
+  <app-print-admin
+    class="adminItem-container"
+    *ngFor="let adItem of orders"
+    [adminItem]="adItem"
+  ></app-print-admin>
+</div>
