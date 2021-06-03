@@ -1,3 +1,7 @@
-<app-navbar></app-navbar>
-<h2>movies works!</h2>
-<app-footer></app-footer>
+<div class="movies-container">
+  <app-movie
+    class="movie-wrapper"
+    *ngFor="let movie of movies"
+    [movieItem]="movie"
+  ></app-movie>
+</div>

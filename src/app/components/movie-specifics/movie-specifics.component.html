@@ -1,0 +1,21 @@
+<div class="movie-container">
+  <div class="movieConatiner-content">
+    <img class="poster" [src]="movieItem.imageUrl" [alt]="movieItem.name" />
+
+    <div class="movieInfo-container">
+      <div class="movieInfo">
+        <h3>
+          {{ movieItem.name }}
+        </h3>
+
+        <p>
+          {{ movieItem.description }}
+        </p>
+        <p>Release Date : {{ movieItem.year }}</p>
+      </div>
+      <div class="backToHome-container">
+        <button (click)="handleBackToHome()">Back to Home</button>
+      </div>
+    </div>
+  </div>
+</div>

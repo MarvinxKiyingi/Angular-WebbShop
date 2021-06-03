@@ -1,21 +1,21 @@
 export class Movie {
-  added: String;
-  description: String;
-  id: Number;
-  imageUrl: String;
-  name: String;
-  price: Number;
+  added: string;
+  description: string;
+  id: number;
+  imageUrl: string;
+  name: string;
+  price: number;
   productCategory: [];
-  year: Number;
+  year: number;
 
   constructor(
-    Id: Number,
-    Name: String,
-    ImageUrl: String,
-    Description: String,
-    Price: Number,
-    Year: Number,
-    Added: String,
+    Id: number,
+    Name: string,
+    ImageUrl: string,
+    Description: string,
+    Price: number,
+    Year: number,
+    Added: string,
     ProductCategory: []
   ) {
     this.id = Id;
