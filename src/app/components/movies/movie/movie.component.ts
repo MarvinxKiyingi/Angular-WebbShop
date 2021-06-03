@@ -16,10 +16,6 @@ export class MovieComponent implements OnInit {
   // constructor() {}
 
   ngOnInit(): void {}
-
-  // handleClick(): void {
-  //   this.selectedMovie.emit(this.movieItem);
-  // }
   showSpecifics(): void {
     console.log('show more');
     this.router.navigate(['movie', this.movieItem.id]);

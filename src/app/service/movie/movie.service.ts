@@ -10,12 +10,10 @@ export class MovieService {
   private movies = new Subject<Movie[]>();
   movies$ = this.movies.asObservable();
 
-  // Här inporterar jag min http module in till min service där jag kommer att använda mig av den.
   constructor(private http: HttpClient) {}
 
   getMovies(): void {
     if (!localStorage.getItem('Movies')) {
-      // Hämta från api och spara i localstorage
       this.http
         .get<Movie[]>(
           'https://medieinstitutet-wie-products.azurewebsites.net/api/products'
@@ -25,7 +23,6 @@ export class MovieService {
           localStorage.setItem('Movies', JSON.stringify(data));
         });
     } else {
-      // Hämta data från localstorage
       this.movies.next(JSON.parse(localStorage.getItem('Movies')));
     }
   }
