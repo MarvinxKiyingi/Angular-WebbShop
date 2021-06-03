@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'app/scss/_navbar';
+@import 'app/scss/_printmovie';
+@import 'app/scss/_movieSpecifics';
+@import 'app/scss/_printcart';
+@import 'app/scss/_checkout';
+@import 'app/scss/_orderconfirmation';
+@import 'app/scss/_printadmin';
+
+
+
+
+// the path for all the components without a parent
+// @import '../../scss/_printadmin';
+
+// the path for all components that are children
+// @import '../../../scss/_printcart';
