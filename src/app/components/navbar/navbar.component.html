@@ -1,27 +1,28 @@
-<nav class="navbar-wrapper">
-<div class="logo-container">
-<h3>TvTime</h3>
-</div>
-<div>
-<ul>
-    <li class="nav-item">
-      <a
-        routerLink="/"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="nav-link"
-        >Home</a
-      >
-    </li>
-    <li class="nav-item">
-      <a
-        routerLink="/shoppingcart"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="nav-link"
-        >Cart</a
-      >
-    </li>
-  </ul>
-</div>
+<nav class="navbar-container">
+  <div class="logo-container">
+    <!-- <h3>CouchTuner</h3> -->
+    <a href="/">CouchTuner</a>
+  </div>
+  <div class="navItems-container">
+    <ul>
+      <li class="nav-item">
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav-link"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          routerLink="/shoppingcart"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav-link"
+          >Cart</a
+        >
+      </li>
+    </ul>
+  </div>
 </nav>

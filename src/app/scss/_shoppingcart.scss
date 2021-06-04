@@ -1,0 +1,86 @@
+@import "_mixins/colors";
+@import "_mixins/_responsiveScreenSize";
+@import "_mixins/typography";
+.emptyCart {
+  background-color: $bgCol;
+  display: flex;
+  justify-content: center;
+  .emptyCartContent-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      width: 20rem;
+      color: $accentCol1;
+      text-align: center;
+      font-size: 3rem;
+      @include verticalTablet {
+        width: 50rem;
+        font-size: 5rem;
+      }
+      @include desktop {
+        width: 80rem;
+        font-size: 9rem;
+      }
+    }
+  }
+}
+.shoppingCart-wrapper {
+  background-color: $bgCol;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  @include verticalTablet {
+    flex-direction: row;
+    align-items: unset;
+  }
+  .cartItems-container {
+    width: 90%;
+    @include verticalTablet {
+      width: 70%;
+      margin-left: 1rem;
+    }
+  }
+  .checkout {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    @include verticalTablet {
+      justify-content: unset;
+      align-items: unset;
+      width: 30%;
+    }
+    h3,
+    p {
+      padding-bottom: 0.5rem;
+      @include desktopLargeXL {
+        font-size: 4rem;
+      }
+    }
+
+    button {
+      background-color: $accentCol2;
+      color: white;
+      border: none;
+      padding: 0.3rem 1rem;
+      @include verticalTablet {
+        padding: 0.5rem 1rem;
+      }
+      @include desktop {
+        padding: 1rem 1rem;
+        font-size: 1.2rem;
+      }
+      @include desktopLargeXL {
+        padding: 1rem 1rem;
+        font-size: 2rem;
+      }
+    }
+  }
+}

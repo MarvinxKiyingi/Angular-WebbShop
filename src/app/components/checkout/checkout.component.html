@@ -1,13 +1,72 @@
-<div>
-  <h1>Almost there</h1>
-  <form [formGroup]="userFrom" (ngSubmit)="onSubmit()">
-    <input type="text" placeholder="First Name" formControlName="firstName" />
-    <select name="dropdown" formControlName="paymentMethod">
-      <option value="">Payment Method</option>
-      <option value="Visa">Visa</option>
-      <option value="Master Card">Master Card</option>
-      <option value="American express">American express</option>
-    </select>
-    <button type="submit" [disabled]="userFrom.invalid">Create order</button>
-  </form>
+<div class="cartChekout-container">
+  <h2>Checkout</h2>
+  <div class="cartSummary-container">
+    <div class="cartItemSummary-container">
+      <h3>Order:</h3>
+      <div class="cartSummary" *ngFor="let cartItem of cartItems">
+        <div class="cartSummaryItem">
+          <h4>{{ cartItem.name }}</h4>
+          <p>{{ cartItem.price }} Kr</p>
+        </div>
+      </div>
+      <div class="totalAmount-Container">
+        <p class="totalAmount">Total: {{ totalAmount }} Kr</p>
+      </div>
+    </div>
+
+    <div class="checkoutForm-container">
+      <h3>Coustomer:</h3>
+      <form [formGroup]="userFrom" (ngSubmit)="onSubmit()">
+        <input
+          type="text"
+          placeholder="First Name"
+          formControlName="firstName"
+          class="name"
+        />
+        <input
+          type="text"
+          placeholder="Last Name"
+          formControlName="lastName"
+          class="name"
+        />
+        <input
+          type="text"
+          placeholder="Adress"
+          formControlName="adress"
+          class="adress"
+        />
+        <input
+          type="number"
+          placeholder="Post Code"
+          formControlName="postCode"
+          class="postCode"
+        />
+        <input
+          type="number"
+          placeholder="Phone number"
+          formControlName="phoneNumber"
+          class="phoneNumber"
+        />
+        <input
+          type="text"
+          placeholder="Email"
+          formControlName="email"
+          class="email"
+        />
+        <select name="dropdown" formControlName="paymentMethod">
+          <option value="">Payment Method</option>
+          <option value="Visa">Visa</option>
+          <option value="Master Card">Master Card</option>
+          <option value="American express">American express</option>
+        </select>
+        <button
+          class="submitButton"
+          type="submit"
+          [disabled]="userFrom.invalid"
+        >
+          Create order
+        </button>
+      </form>
+    </div>
+  </div>
 </div>

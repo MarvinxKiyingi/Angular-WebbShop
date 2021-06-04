@@ -1,0 +1,36 @@
+@import "_mixins/colors";
+@import "_mixins/_responsiveScreenSize";
+@import "_mixins/typography";
+.orderConfirm-container {
+  background-color: $bgCol;
+  display: flex;
+  justify-content: center;
+  .orderConfirm-content {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      width: 25rem;
+      color: $accentCol1;
+      text-align: center;
+      font-size: 3rem;
+      @include verticalTablet {
+        width: 35rem;
+        font-size: 5rem;
+      }
+      @include desktop {
+        width: 80rem;
+        font-size: 9rem;
+      }
+    }
+    a {
+      text-decoration: none;
+      background-color: $accentCol2;
+      color: white;
+      padding: 0.5rem 1rem;
+    }
+  }
+}

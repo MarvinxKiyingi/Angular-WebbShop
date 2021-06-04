@@ -25,3 +25,8 @@
     @content;
   }
 }
+@mixin desktopLargeXL {
+  @media screen and (min-width: 3440px) {
+    @content;
+  }
+}
