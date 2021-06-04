@@ -1,0 +1,82 @@
+@import "_mixins/colors";
+@import "_mixins/_responsiveScreenSize";
+@import "_mixins/typography";
+
+.cartChekout-container {
+  background-color: $bgCol;
+  height: 100vh;
+  width: 100vw;
+  h2 {
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .cartSummary-container {
+    @include verticalTablet {
+      display: flex;
+    }
+    .cartItemSummary-container {
+      @include verticalTablet {
+        width: 50%;
+      }
+
+      .cartSummary {
+        .cartSummaryItem {
+          background-color: $accentCol1;
+          margin: 0.5rem;
+          padding: 0.5rem;
+        }
+      }
+      .totalAmount-Container {
+        display: flex;
+        justify-content: flex-end;
+        .totalAmount {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+  .checkoutForm-container {
+    @include verticalTablet {
+      width: 50%;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: 0.5rem;
+      @include verticalTablet {
+        flex-wrap: wrap;
+        flex-direction: unset;
+        justify-content: space-between;
+      }
+      input {
+        border: none;
+        margin-bottom: 0.5rem;
+        padding: 0.7rem;
+      }
+      @include verticalTablet {
+        .name,
+        .postCode,
+        .phoneNumber {
+          width: 50%;
+        }
+        .adress,
+        .email {
+          width: 100%;
+        }
+      }
+    }
+    .submitButton {
+      margin-top: 0.5rem;
+      padding: 0.4rem 1rem;
+      border: none;
+      &:enabled {
+        background-color: $accentCol2;
+        color: white;
+        border: none;
+      }
+      @include verticalTablet {
+        margin-top: unset;
+      }
+    }
+  }
+}

@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'app/scss/_navbar';
+@import 'app/scss/_movies';
+@import 'app/scss/_printmovie';
+@import 'app/scss/_movieSpecifics';
+@import 'app/scss/_shoppingcart';
+@import 'app/scss/_printcart';
+@import 'app/scss/_checkout';
+@import 'app/scss/_orderconfirmation';
+@import 'app/scss/_admin';
+@import 'app/scss/_printadmin';
+@import 'app/scss/_pagenotfound';
+@import 'app/scss/_mixins/typography';
+
+*,
+body,
+div,
+h1 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    font-family: $mainFont
+}
+
+// the path for all the components without a parent
+// @import '../../scss/_printadmin';
+
+// the path for all components that are children
+// @import '../../../scss/_printcart';

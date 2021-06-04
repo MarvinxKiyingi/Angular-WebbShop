@@ -19,6 +19,7 @@ export class AdminService {
           'https://medieinstitutet-wie-products.azurewebsites.net/api/orders?companyId=9610'
         )
         .subscribe((data) => {
+          this.orders.next(data);
           localStorage.setItem('Orders', JSON.stringify(data));
         });
     } else {

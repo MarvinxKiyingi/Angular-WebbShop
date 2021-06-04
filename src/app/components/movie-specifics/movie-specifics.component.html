@@ -1,17 +1,19 @@
-<div class="movie-container">
-  <div class="movieConatiner-content">
+<div class="movieSpec-container">
+  <div class="movieSpecConatiner-content">
     <img class="poster" [src]="movieItem.imageUrl" [alt]="movieItem.name" />
 
-    <div class="movieInfo-container">
+    <div class="movieSpecInfo-container">
       <div class="movieInfo">
-        <h3>
-          {{ movieItem.name }}
-        </h3>
-
-        <p>
-          {{ movieItem.description }}
-        </p>
-        <p>Release Date : {{ movieItem.year }}</p>
+        <h3>{{ movieItem.name }} - ( {{ movieItem.year }} )</h3>
+        <div>
+          <h5>Description:</h5>
+          <p>
+            {{ movieItem.description }}
+          </p>
+        </div>
+        <button class="addTocartButton" (click)="handleAddToCart()">
+          Add to cart
+        </button>
       </div>
       <div class="backToHome-container">
         <button (click)="handleBackToHome()">Back to Home</button>
