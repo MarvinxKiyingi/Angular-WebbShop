@@ -13,10 +13,14 @@ import { OrderService } from 'src/app/service/order/order.service';
 })
 export class CheckoutComponent implements OnInit {
   cartItems: Movie[] = [];
-  totalsum: number;
+  totalAmount: number;
 
   userFrom = this.fb.group({
     firstName: ['', Validators.required],
+    lastName: [''],
+    email: [''],
+    postCode: [''],
+    phoneNumber: [''],
     paymentMethod: ['', Validators.required],
   });
   constructor(
@@ -32,7 +36,7 @@ export class CheckoutComponent implements OnInit {
     });
 
     this.cartService.getCartItems();
-    this.totalsum = this.cartService.getTotalAmount();
+    this.totalAmount = this.cartService.getTotalAmount();
   }
 
   onSubmit(): void {
