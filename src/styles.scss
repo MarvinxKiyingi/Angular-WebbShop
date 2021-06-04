@@ -6,9 +6,19 @@
 @import 'app/scss/_checkout';
 @import 'app/scss/_orderconfirmation';
 @import 'app/scss/_printadmin';
+@import 'app/scss/_mixins/typography';
 
-
-
+*,
+body,
+div,
+h1 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    font-family: $mainFont
+}
 
 // the path for all the components without a parent
 // @import '../../scss/_printadmin';
