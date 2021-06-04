@@ -1,3 +1,82 @@
 @import "_mixins/colors";
 @import "_mixins/_responsiveScreenSize";
 @import "_mixins/typography";
+.movieSpec-container {
+  background-color: $bgCol;
+  display: flex;
+  justify-content: center;
+  .movieSpecConatiner-content {
+    background-color: $accentCol1;
+    width: 85%;
+    margin: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include desktop {
+      flex-direction: row;
+    }
+    .poster {
+      max-width: 100%;
+      @include desktop {
+        max-width: 50%;
+      }
+    }
+    .movieSpecInfo-container {
+      display: flex;
+      flex-direction: column;
+      @include desktop {
+        height: 100%;
+      }
+      .movieInfo {
+        @include desktop {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        }
+        padding: 1rem;
+        h3,
+        p {
+          padding-bottom: 1rem;
+        }
+        @include verticalTablet {
+          h3 {
+            font-size: 2rem;
+            text-align: center;
+          }
+          p,
+          h5 {
+            font-size: 1.3rem;
+          }
+        }
+        .addTocartButton {
+          background-color: $accentCol2;
+          color: white;
+          border: none;
+          font-size: 1rem;
+          padding: 0.5rem 1.5rem;
+          @include verticalTablet {
+            font-size: 1.3rem;
+            padding: 0.5rem 1.5rem;
+            width: 30%;
+          }
+        }
+      }
+      .backToHome-container {
+        display: flex;
+        justify-content: flex-end;
+        button {
+          background-color: white;
+          color: black;
+          border: none;
+          padding: 0.2rem 0.7rem;
+          @include verticalTablet {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}

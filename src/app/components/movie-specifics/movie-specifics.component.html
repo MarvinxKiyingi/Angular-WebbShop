@@ -4,14 +4,13 @@
 
     <div class="movieSpecInfo-container">
       <div class="movieInfo">
-        <h3>
-          {{ movieItem.name }}
-        </h3>
-
-        <p>
-          {{ movieItem.description }}
-        </p>
-        <p>Release Date : {{ movieItem.year }}</p>
+        <h3>{{ movieItem.name }} - ( {{ movieItem.year }} )</h3>
+        <div>
+          <h5>Description:</h5>
+          <p>
+            {{ movieItem.description }}
+          </p>
+        </div>
         <button class="addTocartButton" (click)="handleAddToCart()">
           Add to cart
         </button>
