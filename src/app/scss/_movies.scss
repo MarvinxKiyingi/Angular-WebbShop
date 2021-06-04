@@ -5,8 +5,19 @@
   display: flex;
   flex-direction: column;
   background-color: #c7cdc9;
+  @include verticalTablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .movie-wrapper {
     display: flex;
     justify-content: center;
+    @include verticalTablet {
+      width: 30%;
+    }
+    @include desktopLarge {
+      width: 20%;
+    }
   }
 }

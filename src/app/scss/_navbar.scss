@@ -11,10 +11,15 @@
     align-items: center;
     a {
       text-decoration: none;
+      cursor: pointer;
       font-weight: 700;
+      font-size: 2rem;
       color: $logoCol;
       padding: 0rem 1rem;
       font-family: $logoFont;
+      @include desktopLargeXL {
+        font-size: 3rem;
+      }
     }
   }
   .navItems-container {
@@ -22,7 +27,10 @@
       list-style-type: none;
       display: flex;
       li {
-        padding: 1rem 1.5rem;
+        padding: 1rem 1rem;
+        @include verticalTablet {
+          padding: 1rem 1.5rem;
+        }
         a:hover {
           text-decoration: underline;
         }
@@ -33,6 +41,16 @@
     .nav-link {
       text-decoration: none;
       color: $navitemsCol;
+      font-size: 1.2rem;
+      @include verticalTablet {
+        font-size: 1.4rem;
+      }
+      @include desktop {
+        font-size: 1.6rem;
+      }
+      @include desktopLarge {
+        font-size: 1.9rem;
+      }
     }
     .active {
       color: #bb4e36;

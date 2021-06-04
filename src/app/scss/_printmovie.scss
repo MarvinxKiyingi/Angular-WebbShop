@@ -8,8 +8,27 @@
   background-color: $accentCol1;
   width: 85%;
   margin: 1rem;
+  @include verticalTablet {
+    justify-content: center;
+    justify-content: space-evenly;
+    max-width: 90%;
+  }
+  @include desktopLarge {
+    max-width: 85%;
+  }
+  @include desktopLargeXL {
+    max-width: 65%;
+  }
   .poster {
     max-width: 100%;
+    @include verticalTablet {
+      max-width: 90%;
+      max-height: 80%;
+    }
+    @include desktop {
+      max-width: 95%;
+      max-height: 80%;
+    }
   }
   button {
     background-color: $accentCol2;
@@ -18,6 +37,10 @@
     border: none;
     padding: 0.5rem 2rem;
     margin: 0.5rem;
+    @include desktopLargeXL {
+      padding: 1rem 5rem;
+      font-size: 2rem;
+    }
     &:active {
       border: white;
     }
