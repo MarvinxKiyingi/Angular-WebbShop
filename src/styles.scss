@@ -1,11 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'app/scss/_navbar';
+@import 'app/scss/_movies';
 @import 'app/scss/_printmovie';
 @import 'app/scss/_movieSpecifics';
+@import 'app/scss/_shoppingcart';
 @import 'app/scss/_printcart';
 @import 'app/scss/_checkout';
 @import 'app/scss/_orderconfirmation';
+@import 'app/scss/_admin';
 @import 'app/scss/_printadmin';
+@import 'app/scss/_pagenotfound';
 @import 'app/scss/_mixins/typography';
 
 *,

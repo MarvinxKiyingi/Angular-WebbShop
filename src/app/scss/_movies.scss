@@ -1,0 +1,12 @@
+@import "_mixins/colors";
+@import "_mixins/_responsiveScreenSize";
+@import "_mixins/typography";
+.movies-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #c7cdc9;
+  .movie-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,3 +1,6 @@
+@import "_mixins/colors";
+@import "_mixins/_responsiveScreenSize";
+@import "_mixins/typography";
 table,
 th {
   border: 1px solid black;
