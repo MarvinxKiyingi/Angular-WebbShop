@@ -18,9 +18,10 @@ export class CheckoutComponent implements OnInit {
   userFrom = this.fb.group({
     firstName: ['', Validators.required],
     lastName: [''],
-    email: [''],
+    adress: [''],
     postCode: [''],
     phoneNumber: [''],
+    email: [''],
     paymentMethod: ['', Validators.required],
   });
   constructor(
