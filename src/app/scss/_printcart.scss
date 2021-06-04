@@ -1,3 +1,59 @@
 @import "_mixins/colors";
 @import "_mixins/_responsiveScreenSize";
 @import "_mixins/typography";
+
+.cartItem-container {
+  background-color: $accentCol1;
+  display: flex;
+  margin: 1rem 0rem;
+  .poster {
+    max-width: 30%;
+    @include verticalTablet {
+      max-width: 20%;
+    }
+    @include desktop {
+      max-width: 15%;
+    }
+  }
+  .cartItemInfo-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .removeButton-container {
+      display: flex;
+      justify-content: flex-end;
+      .removeButton {
+        width: 1.5rem;
+        font-weight: bold;
+        font-size: 1.3rem;
+        background-color: unset;
+        cursor: pointer;
+        border: 0;
+        color: black;
+        @include desktopLarge {
+          width: 2.5rem;
+          font-size: 2rem;
+        }
+        @include desktopLargeXL {
+          width: 3.5rem;
+          font-size: 3rem;
+        }
+      }
+    }
+    .cartItemInfo {
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      h3 {
+        color: white;
+        @include desktop {
+          font-size: 1.8rem;
+        }
+        @include desktopLargeXL {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+}
